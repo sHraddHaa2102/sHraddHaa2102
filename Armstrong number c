@@ -1,0 +1,40 @@
+
+int main()
+{
+    int number;
+  printf("enter number:");
+  scanf("%d",&number);
+
+  if(armstrong(number))
+        printf("is armstrong %d\n",number);
+  else
+    printf("not %d\n",number);
+}
+
+int armstrong(int number)
+{
+    int originalNumber,n=0,remainder=0,result=0;
+    originalNumber=number;
+    while(originalNumber!=0){
+            originalNumber /=10;
+            n++;
+
+    }
+    originalNumber=number;
+    while(originalNumber!=0){
+        remainder=originalNumber%10;
+        int i,product=1;
+        for (i = 1; i <= n; i++) {
+        product*=remainder;
+
+    }
+    remainder+=product;
+    originalNumber/=10;
+    }
+    if(result==number)
+        return 1;
+    else
+        return 0;
+
+
+}
